@@ -3,21 +3,18 @@ const fs = require('fs');
 const glob = require('glob');
 
 const regexp  = /\.scss$/;
-const sassDir = "src/assets/scss/";
-let sassFiles = "";
+const sassDir = 'src/assets/scss/';
+let sassFiles = '';
 
-new glob.Glob(`${sassDir}**/*.scss`, {}, (err, files) => {
-    if (err) {
-        console.log(err);
-    } else {
-        files.forEach(file => {
-            if (regexp.test(file) && file != `${sassDir}style.scss`) {
-                sassFiles += `@use "${file.replace(sassDir, '')}";\n`;
-            }
-        });
+const files = glob.sync(`${sassDir}**/*.scss`);
 
-        fs.writeFileSync(`${sassDir}style.scss`, sassFiles);
-
-        execSync('npm run sass');
+for (const file of files) {
+    if (regexp.test(file) && file != `${sassDir}style.scss`) {
+        sassFiles += `@use "${file.replace(sassDir, '')}";\n`;
     }
+}
+
+fs.writeFile(`${sassDir}style.scss`, sassFiles, () => {
+    execSync('npm run sass');
+    console.log('scss compilation succeeded💫');
 });
