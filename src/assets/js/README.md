@@ -6,7 +6,14 @@
 
 以下では、各関数の指定可能な引数や、具体的な使用方法を、関数ごとに記載します。
 
-## slideUp
+## 目次
+
+* <a href="#slideup">slideUp</a>
+* <a href="#slidedown">slideDown</a>
+* <a href="#slidetoggle">slideToggle</a>
+* <a href="#smoothscroll">SmoothScroll</a>
+
+<h2 id="slideup">slideUp</h2>
 
 対象の要素を上にスライドさせながら非表示にします。アコーディオンメニューなどに利用できます。
 
@@ -24,7 +31,7 @@ slideUp(el, duration);
 
 
 
-## slideDown
+<h2 id="slidedown">slideDown</h2>
 
 対象の要素を下にスライドさせながら表示します。アコーディオンメニューなどに利用できます。
 
@@ -42,7 +49,7 @@ slideDown(el, duration);
 
 
 
-## slideToggle
+<h2 id="slidetoggle">slideToggle</h2>
 
 対象の要素が非表示の場合、下にスライドさせながら表示します。また、対象のelementが表示されている場合、上にスライドさせながら非表示にします。
 
@@ -62,7 +69,7 @@ slideToggle(el, duration);
 
 
 
-## SmoothScroll
+<h2 id="smoothscroll">SmoothScroll</h2>
 
 ページ内のアンカーリンク先へ、滑らかに移動します。
 

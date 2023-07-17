@@ -1,11 +1,11 @@
 {
     "name": "html-starter",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "スタティックページ制作用のテンプレートです。",
     "main": "index.js",
     "scripts": {
         "sass": "sass --no-source-map --style=compressed src/assets/scss:dist/assets/css",
-        "watch:sass": "onchange \"src/**/*.scss\" -- node ./scripts/watch-sass.js",
+        "watch:sass": "onchange \"src/**/*.scss\" -e \"src/**/style.scss\" -- node ./scripts/watch-sass.js",
         "server": "browser-sync start --server dist --files='./dist/*'",
         "watch:server": "browser-sync start --server dist --files='./dist/*'",
         "cpx-img": "cpx \"src/**/*.{jpg,jpeg,png,gif,svg}\" \"dist/\"",

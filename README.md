@@ -2,7 +2,13 @@
 
 静的なWebページを簡単に作り始めることができるテンプレートです
 
-## 🍺 How To Use
+## 目次
+
+* <a href="#how-to-use">How To Use</a>
+* <a href="#history">History</a>
+* <a href="#contact">Contact</a>
+
+<h2 id="how-to-use">🍺 How To Use</h2>
 
 ### 1. 新たに制作するサイトのディレクトリを作成する
 
@@ -39,11 +45,11 @@ $ npm run dev
 
 制作終了時には、`Ctrl` `C` を同時に押して、自動コンパイルなどを終了させます。
 
-## 🍺 History
+<h2 id="history"> 🍺 History</h2>
 
 * 2023/03/21 公開
 
-## 🍺 Contact
+<h2 id="contact"> 🍺 Contact</h2>
 
 お問い合わせ、ご相談は [twitter](https://twitter.com/udc_xx) からお気軽にどうぞ！
 

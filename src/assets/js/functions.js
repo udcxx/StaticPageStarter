@@ -80,7 +80,7 @@ const setSmoothScroll = (els, excArr = []) => {
     els.forEach(el => {
         el.addEventListener("click", e => {
             e.preventDefault();
-            const targetId = e.target.hash;
+            const targetId = e.currentTarget.hash;
             const to = document.querySelector(targetId);
 
             let excHeight = 0;
