@@ -1,4 +1,5 @@
 @use "../vars" as *;
+@use "../function" as *;
 
 //
 // root
@@ -10,11 +11,7 @@ html, body {
     color: $color-base;
 
     @media (max-width: $break) {
-        font-size: clamp(15px, calc(10px + 0.6vw), 10px);
-    }
-
-    @media (max-width: 320px) {
-        font-size: 10px;
+        font-size: calc(10 / #{$break-point-value} * 100vw);
     }
 }
 
@@ -25,33 +22,33 @@ html, body {
 //
 
 h1 {
-    font-size: 2.8rem; font-weight: 900;
-    color: $color-title;
+    @include fontsize(28); font-weight: $weight-black;
+    color: $color-base;
 }
 
 h2 {
-    font-size: 2.2rem; font-weight: 700;
-    color: $color-title;
+    @include fontsize(22); font-weight: $weight-black;
+    color: $color-base;
 }
 
 h3 {
-    font-size: 1.872rem; font-weight: 700;
-    color: $color-title;
+    @include fontsize(18.72); font-weight: $weight-black;
+    color: $color-base;
 }
 
 h4 {
-    font-size: 1.5rem; font-weight: 700;
-    color: $color-title;
+    @include fontsize(15); font-weight: $weight-black;
+    color: $color-base;
 }
 
 h5 {
-    font-size: 1.328rem; font-weight: 500;
-    color: $color-title;
+    @include fontsize(13.28); font-weight: 500;
+    color: $color-base;
 }
 
 h6 {
-    font-size: 1.072rem; font-weight: 500;
-    color: $color-title;
+    @include fontsize(10.72); font-weight: 500;
+    color: $color-base;
 }
 
 
@@ -62,10 +59,15 @@ h6 {
 
 p {
     line-height: 1.8em;
+    @include fontsize(16, 18);
 }
 
 a {
     color: $color-link;
+}
+
+.bold {
+    font-weight: $weight-black;
 }
 
 

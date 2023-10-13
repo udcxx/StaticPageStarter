@@ -3,7 +3,8 @@
 //
 //   * break...SP表示を適用する最大の画面幅
 
-$break: 768px;
+$break-point-value: "768";
+$break: #{$break-point-value}px;
 
 
 
@@ -36,6 +37,17 @@ $color-accent: #ccc;
 $color-link: #019;
 $bg-color-base: #fff;
 $bg-color-accent: #fff;
+
+
+// 
+// フォントウェイト
+// 
+// 
+
+$weight-thin: 300;
+$weight-nomal: 400;
+$weight-bold: 500;
+$weight-black: 700;
 
 
 
