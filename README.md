@@ -48,6 +48,9 @@ $ npm run dev
 <h2 id="history"> 🍺 History</h2>
 
 * 2023/03/21 公開
+* 2023/06/25 微修正 [v0.1.1](https://github.com/udcxx/StaticPageStarter/releases/tag/v.0.1.1)
+* 2023/07/17 微修正 [v0.1.2](https://github.com/udcxx/StaticPageStarter/releases/tag/v.0.1.2)
+* 2023/10/13 微修正 [v0.1.3](https://github.com/udcxx/StaticPageStarter/releases/tag/v0.1.3)
 
 <h2 id="contact"> 🍺 Contact</h2>
 
