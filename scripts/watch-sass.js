@@ -6,10 +6,12 @@ const regexp  = /\.scss$/;
 const sassDir = 'src/assets/scss/';
 let sassFiles = '';
 
-const files = glob.sync(`${sassDir}**/*.scss`);
+const files = glob.sync(`${sassDir}**/_*.scss`);
+
+sassFiles += `@use "base/_reset.scss";\n`;
 
 for (const file of files) {
-    if (regexp.test(file) && file != `${sassDir}style.scss`) {
+    if (regexp.test(file) && file != `${sassDir}style.scss` && file != `${sassDir}base/_reset.scss`) {
         sassFiles += `@use "${file.replace(sassDir, '')}";\n`;
     }
 }
